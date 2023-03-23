@@ -1,7 +1,7 @@
 function Header() {
 	return (
 		<nav>
-			<p>MENU</p>
+			<p>MENU !</p>
 		</nav>
 	);
 }
