@@ -8,7 +8,7 @@ function Carrusel() {
 			}}
 			>
 				<h2 style={{ fontSize: "10em", letterSpacing: "0.05em", fontWeight: "200" }}>VISITANOS</h2>
-				<Boton texto="ver ubicación" />
+				<Boton texto="ver ubicación" ruta="/ubicacion" />
 			</div>
 			<div>
 				<video style={{ width: "100%", height: "100%" }} width="320" height="240" autoPlay muted loop>

@@ -1,5 +1,7 @@
 import Head from "next/head";
+
 import Header from "@/components/Header";
+import Boton from "@/components/Boton";
 
 function ubicacion() {
 	return (
@@ -12,6 +14,7 @@ function ubicacion() {
 			</Head>
 			<Header />
 			<h2>UBICACION</h2>
+			<Boton texto="volver al home" ruta="/" />
 		</>
 	);
 }

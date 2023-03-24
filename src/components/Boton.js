@@ -1,15 +1,14 @@
-import { useRouter } from "next/router";
+import Link from "next/link";
 import estilo from "@/styles/Boton.module.css";
 
 function Boton(props) {
-	const { texto } = props;
-	const router = useRouter();
+	const { texto, ruta } = props;
 
 	return (
-		<button className={estilo.botonComponent} type="button" onClick={() => router.push("/ubicacion")}>
+		<Link className={estilo.botonComponent} href={ruta}>
 			<p>{texto}</p>
 			<img src="/assets/svg/arrowright.svg" alt={texto} />
-		</button>
+		</Link>
 	);
 }
 export default Boton;
