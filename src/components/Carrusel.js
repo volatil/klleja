@@ -7,7 +7,11 @@ function Carrusel() {
 				display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", zIndex: "1", position: "absolute", width: "100%", height: "100%",
 			}}
 			>
-				<h2 style={{ fontSize: "10em", letterSpacing: "0.05em", fontWeight: "200" }}>VISITANOS</h2>
+				<h2 style={{
+					fontSize: "10em", letterSpacing: "0.05em", fontWeight: "300", color: "black",
+				}}
+				>VISÍTANOS
+				</h2>
 				<Boton texto="ver ubicación" ruta="/ubicacion" />
 			</div>
 			<div>

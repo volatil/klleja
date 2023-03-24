@@ -10,9 +10,14 @@ function Header(props) {
 					<img style={{ width: "auto" }} src="/assets/images/logo.png" alt="KLLJA" />
 				</Link>
 			</div>
-			<div>
-				<img style={{ width: "40px" }} src="/assets/svg/lupa.svg" alt="Buscar" />
-				<img style={{ width: "40px" }} src="/assets/svg/hamburguesa.svg" alt="MENU" />
+			<div style={{ display: "flex", gap: "60px" }}>
+				<div>
+					<img style={{ width: "40px" }} src="/assets/svg/lupa.svg" alt="Buscar" />
+				</div>
+				<div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+					<p style={{ color: "black", fontWeight: "700", fontSize: "1.8em" }}>MENU</p>
+					<img style={{ width: "40px" }} src="/assets/svg/hamburguesa.svg" alt="MENU" />
+				</div>
 			</div>
 		</header>
 	);
