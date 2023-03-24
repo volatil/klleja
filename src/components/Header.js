@@ -1,13 +1,10 @@
 import Link from "next/link";
+import css from "@/styles/Header.module.css";
 
-function Header() {
+function Header(props) {
+	const { ishome } = props;
 	return (
-		<header
-			style={{
-				background: "white", display: "flex", justifyContent: "space-between", alignItems: "center", height: "80px",
-			}}
-			id="menu"
-		>
+		<header className={ishome ? `${css.header} ${css.estoyenelhome}` : `${css.header}`}>
 			<div>
 				<Link href="/">
 					<img style={{ width: "auto" }} src="/assets/images/logo.png" alt="KLLJA" />
