@@ -22,8 +22,7 @@ function Carrusel() {
 						https://pixabay.com/es/videos/navegar-mar-oceano-onda-playa-36609/
 					*/}
 					<source src="assets/video/surf.mp4" type="video/mp4" />
-					<source src="movie.ogg" type="video/ogg" />
-					Your browser does not support the video tag.
+					<source src="assets/video/surf.ogg" type="video/ogg" />
 				</video>
 			</div>
 		</section>
