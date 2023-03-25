@@ -1,3 +1,8 @@
 .losmasvendidos {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.losmasvendidos .productos {
 	background-color: red;
 }

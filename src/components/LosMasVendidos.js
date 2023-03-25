@@ -10,7 +10,9 @@ const LosMasVendidos = function () {
 				<p>Nos preocupamos obsesivamente por cada detalle de nuestros hoodies, para que se ajuste y se sientan mejor que cualquier otro hoodie que hayas usado.</p>
 				<Boton width="400px" texto="ver los más vendidos" ruta="/tienda" />
 			</div>
-			<div />
+			<div className={css.productos} style={{ background: "red" }}>
+				<p>PRODUCTOS</p>
+			</div>
 		</section>
 	);
 };
