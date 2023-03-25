@@ -8,7 +8,7 @@ function Carrusel() {
 			}}
 			>
 				<h2 style={{
-					fontSize: "10em", letterSpacing: "0.05em", fontWeight: "300", color: "black",
+					fontSize: "10em", letterSpacing: "0.05em", fontWeight: "300", color: "white",
 				}}
 				>VISÍTANOS
 				</h2>

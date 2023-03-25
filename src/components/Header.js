@@ -1,57 +1,47 @@
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import css from "@/styles/Header.module.css";
 
 function Categorias() {
+	const router = useRouter();
+
+	function tamoactivo(url) {
+		const clase = router.pathname === url ? `${css.tamosactivo}` : "";
+		return clase;
+	}
+
 	return (
-		<nav style={{
-			background: "#231f20", position: "absolute", top: "0", left: "0", width: "100%", height: "100%", zIndex: "3",
-		}}
-		>
-			<ul style={{ width: "80%", margin: "80px auto 0" }}>
-				<li style={{ width: "100%", textAlign: "center", listStyle: "none" }}>
-					<Link
-						style={{
-							color: "white", fontSize: "6em", fontWeight: "900", textTransform: "uppercase",
-						}}
-						href="/"
-					>inicio
+		<nav className={css.navMenu}>
+			<ul>
+				<li className={tamoactivo("/")}>
+					<Link href="/">
+						<p>inicio</p>
+						<span />
 					</Link>
 				</li>
-				<li style={{ width: "100%", textAlign: "center", listStyle: "none" }}>
-					<Link
-						style={{
-							color: "white", fontSize: "6em", fontWeight: "900", textTransform: "uppercase",
-						}}
-						href="/tienda"
-					>tienda
+				<li className={tamoactivo("/tienda")}>
+					<Link href="/tienda">
+						<p>tienda</p>
+						<span />
 					</Link>
 				</li>
-				<li style={{ width: "100%", textAlign: "center", listStyle: "none" }}>
-					<Link
-						style={{
-							color: "white", fontSize: "6em", fontWeight: "900", textTransform: "uppercase",
-						}}
-						href="/nosotros"
-					>nosotros
+				<li className={tamoactivo("/nosotros")}>
+					<Link href="/nosotros">
+						<p>nosotros</p>
+						<span />
 					</Link>
 				</li>
-				<li style={{ width: "100%", textAlign: "center", listStyle: "none" }}>
-					<Link
-						style={{
-							color: "white", fontSize: "6em", fontWeight: "900", textTransform: "uppercase",
-						}}
-						href="/ubicacion"
-					>ubicación
+				<li className={tamoactivo("/ubicacion")}>
+					<Link href="/ubicacion">
+						<p>ubicación</p>
+						<span />
 					</Link>
 				</li>
-				<li style={{ width: "100%", textAlign: "center", listStyle: "none" }}>
-					<Link
-						style={{
-							color: "white", fontSize: "6em", fontWeight: "900", textTransform: "uppercase",
-						}}
-						href="/contacto"
-					>contacto
+				<li className={tamoactivo("/contacto")}>
+					<Link href="/contacto">
+						<p>contacto</p>
+						<span />
 					</Link>
 				</li>
 			</ul>
@@ -64,8 +54,6 @@ function Header(props) {
 	const { ishome } = props;
 
 	function handleClick() {
-		console.debug( "CLICK" );
-		console.debug( `Estado: ${desplegarMenu}` );
 		setdesplegarMenu(!desplegarMenu);
 	}
 
@@ -77,7 +65,6 @@ function Header(props) {
 						<img style={{ width: "auto" }} src="/assets/images/logo.png" alt="KLLJA" />
 					</Link>
 				</div>
-				{ desplegarMenu ? "desplegado" : "oculto" }
 				<div style={{ display: "flex", gap: "60px" }}>
 					<div>
 						<img style={{ width: "40px" }} src="/assets/svg/lupa.svg" alt="Buscar" />
