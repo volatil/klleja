@@ -1,0 +1,88 @@
+.convenios {
+	margin-top: 40px;
+	margin-bottom: 100px;
+}
+.convenios > h3 {
+	text-align: center;
+	font-size: 2em;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.convenios > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+}
+.convenios > div > img {
+	opacity: .6;
+	-webkit-transition: all 0.4s ease-out;
+	-moz-transition:    all 0.4s ease-out;
+	-o-transition:      all 0.4s ease-out;
+	transition:         all 0.4s ease-out;
+}
+.convenios > div > img:hover {
+	opacity: 1;
+}
+.misionvision {
+	display: flex;
+	width: 60%;
+	margin: 0 auto 40px;
+	justify-content: space-between;
+	gap: 70px;
+	align-items: center;
+}
+.misionvision > div > h4 {
+	font-weight: 700;
+	font-size: 3em;
+	text-transform: uppercase;
+}
+.misionvision > div > p {
+	font-size: 1.2em;
+}
+.misionvision > div > img {
+	width: 180px;
+}
+.quienessomos {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 200px;
+}
+.quienessomos .titulo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 50px;
+}
+.quienessomos > .titulo > img {
+	width: 220px;
+}
+.quienessomos > .titulo > h4 {
+	font-size: 3em;
+	text-transform: uppercase;
+}
+.quienessomos > div {
+	display: flex;
+	gap: 40px;
+}
+.quienessomos > div > div {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	padding: 20px 10px;
+	border-radius: 20px;
+}
+.quienessomos > div > div > img {
+	width: 70%;
+}
+.quienessomos > div > div > ul {
+	width: 100%;
+	margin-top: 20px;
+}
+.quienessomos > div > div > ul > li {
+	list-style: none;
+	padding-left: 20px;
+}

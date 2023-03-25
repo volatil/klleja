@@ -26,9 +26,9 @@ function MenuContenido() {
 						<span />
 					</Link>
 				</li>
-				<li className={tamoactivo("/convenios")}>
-					<Link href="/convenios">
-						<p>convenios</p>
+				<li className={tamoactivo("/nosotros")}>
+					<Link href="/nosotros">
+						<p>nosotros</p>
 						<span />
 					</Link>
 				</li>

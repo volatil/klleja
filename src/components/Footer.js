@@ -1,9 +1,11 @@
 import Link from "next/link";
+
 import css from "@/styles/Footer.module.css";
 
 const Footer = function () {
 	return (
 		<footer className={css.footer}>
+			<div className={css.puntas} />
 			<nav>
 				<ul>
 					<li>
