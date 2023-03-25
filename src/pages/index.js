@@ -5,9 +5,8 @@ import Image from "next/image";
 
 import Header from "@/components/Header";
 import Carrusel from "@/components/Carrusel";
+import LosMasVendidos from "@/components/LosMasVendidos";
 import Footer from "@/components/Footer";
-
-// const jost = Jost({ subsets: ["latin"] });
 
 export default function Home() {
 	return (
@@ -21,6 +20,7 @@ export default function Home() {
 			<Header ishome />
 			<main>
 				<Carrusel />
+				<LosMasVendidos />
 			</main>
 			<Footer />
 		</>
