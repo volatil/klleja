@@ -18,7 +18,27 @@
 .header > div {
 	cursor: pointer;
 }
-
+.header > div > img.lupa {
+	width: auto;
+}
+.menu {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.menu > p {
+	color: black;
+	font-weight: 700;
+	font-size: 1.8em;
+}
+.menu > p.menudesplegado {
+	color: white;
+	font-weight: 700;
+	font-size: 1.8em;
+}
+.menu > img {
+	width: 40px;
+}
 .navMenu {
 	background: #231f20;
 	position: absolute;
@@ -62,4 +82,9 @@ li.tamosactivo span ,
 	right: 0;
 	z-index: -1;
 	margin: 0 auto;
+}
+
+.header .derecha {
+	display: flex;
+	gap: 60px;
 }
