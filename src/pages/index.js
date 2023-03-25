@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import Header from "@/components/Header";
 import Carrusel from "@/components/Carrusel";
+import Footer from "@/components/Footer";
 
 // const jost = Jost({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function Home() {
 			<main>
 				<Carrusel />
 			</main>
+			<Footer />
 		</>
 	);
 }
