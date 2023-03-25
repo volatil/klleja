@@ -2,3 +2,32 @@
 	background-color: whitesmoke;
 	height: 200px;
 }
+.footer > nav {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.footer > nav > ul {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+.footer > nav > ul > li {
+	list-style: none;
+}
+.footer > nav > ul > li > a {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition:    all 0.2s ease-out;
+	-o-transition:      all 0.2s ease-out;
+	transition:         all 0.2s ease-out;
+}
+.footer > nav > ul > li > a:hover {
+	text-decoration: underline;
+	color: var(--cyan);
+}
