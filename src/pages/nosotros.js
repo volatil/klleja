@@ -20,7 +20,7 @@ function Nosotros() {
 				<TituloPagina titulo="nosotros" />
 
 				<div className={css.nosotros}>
-					<h3>confiarón en nosotros</h3>
+					<h4>confiarón en nosotros</h4>
 					<div>
 						<img src="/assets/svg/tripadvisor.svg" alt="TripAdvisor" />
 						<img src="/assets/svg/ticketmaster.svg" alt="Ticketmaster" />
@@ -35,12 +35,12 @@ function Nosotros() {
 						<h4>visión</h4>
 						<p>Apoyar a los niños, niñas y jóvenes en el desarrollo de sus competencias o capacidades para su correcta formación deportiva a través de esta red.</p>
 					</div>
-					<div>
+					<div className={css.imagen}>
 						<img src="/assets/images/vision.png" alt="visión" />
 					</div>
 				</div>
 				<div className={css.misionvision}>
-					<div>
+					<div className={css.imagen}>
 						<img src="/assets/images/mision.png" alt="misión" />
 					</div>
 					<div>
