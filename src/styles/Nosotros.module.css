@@ -1,27 +1,27 @@
-.convenios {
+.nosotros {
 	margin-top: 40px;
 	margin-bottom: 100px;
 }
-.convenios > h3 {
+.nosotros > h3 {
 	text-align: center;
 	font-size: 2em;
 	text-transform: uppercase;
 	margin-bottom: 20px;
 }
-.convenios > div {
+.nosotros > div {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 50px;
 }
-.convenios > div > img {
+.nosotros > div > img {
 	opacity: .6;
 	-webkit-transition: all 0.4s ease-out;
 	-moz-transition:    all 0.4s ease-out;
 	-o-transition:      all 0.4s ease-out;
 	transition:         all 0.4s ease-out;
 }
-.convenios > div > img:hover {
+.nosotros > div > img:hover {
 	opacity: 1;
 }
 .misionvision {

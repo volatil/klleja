@@ -4,7 +4,7 @@
 	align-items: center;
 	gap: 40px;
 	width: 98%;
-	margin: 0 auto;
+	margin: 40px auto 0;
 }
 .losmasvendidos .mensaje {
 	width: 30%;
@@ -22,18 +22,4 @@
 .losmasvendidos .mensaje > a {
 	width: 90%;
 	font-size: 0.5em;
-}
-.losmasvendidos .productos {
-	width: 80%;
-	display: flex;
-}
-.losmasvendidos .productos .producto {
-	width: 25%;
-}
-.losmasvendidos .productos .producto img {
-	width: 100%;
-}
-.losmasvendidos .productos .producto .precio {
-	color: var(--rojo);
-	font-weight: bold;
 }

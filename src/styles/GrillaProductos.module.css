@@ -1,0 +1,14 @@
+.productos {
+	width: 80%;
+	display: flex;
+}
+.productos .producto {
+	width: 25%;
+}
+.productos .producto img {
+	width: 100%;
+}
+.productos .producto .precio {
+	color: var(--rojo);
+	font-weight: bold;
+}

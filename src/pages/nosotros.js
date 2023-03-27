@@ -6,11 +6,11 @@ import Footer from "@/components/Footer";
 
 import css from "@/styles/Nosotros.module.css";
 
-function convenios() {
+function Nosotros() {
 	return (
 		<>
 			<Head>
-				<title>CONVENIOS | KLLEJA</title>
+				<title>NOSOTROS | KLLEJA</title>
 				<meta name="description" content="The beat of life" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
@@ -19,8 +19,8 @@ function convenios() {
 			<main>
 				<TituloPagina titulo="nosotros" />
 
-				<div className={css.convenios}>
-					<h3>convenios</h3>
+				<div className={css.nosotros}>
+					<h3>confiarón en nosotros</h3>
 					<div>
 						<img src="/assets/svg/tripadvisor.svg" alt="TripAdvisor" />
 						<img src="/assets/svg/ticketmaster.svg" alt="Ticketmaster" />
@@ -110,4 +110,4 @@ function convenios() {
 		</>
 	);
 }
-export default convenios;
+export default Nosotros;
