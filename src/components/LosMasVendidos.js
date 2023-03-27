@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import trae from "@/pages/api";
+import trae from "@/services/api";
 import precio from "@/helpers/helpers";
 import Boton from "./Boton";
 
@@ -50,7 +50,7 @@ const LosMasVendidos = function () {
 	const [ladata, setladata] = useState(null);
 
 	useEffect(() => {
-		setladata( trae() );
+		setladata( trae );
 	}, []);
 
 	return (
