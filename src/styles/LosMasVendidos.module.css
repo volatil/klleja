@@ -2,7 +2,28 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	gap: 40px;
+	width: 98%;
+	margin: 0 auto;
+}
+.losmasvendidos .mensaje {
+	width: 30%;
+}
+.losmasvendidos .mensaje > h5 {
+	font-size: 3em;
+	line-height: 0.9em;
+}
+.losmasvendidos .mensaje > h5::first-letter {
+	text-transform: uppercase;
+}
+.losmasvendidos .mensaje > p {
+	margin: 10px 0 20px 0;
+}
+.losmasvendidos .mensaje > a {
+	width: 90%;
+	font-size: 0.5em;
 }
 .losmasvendidos .productos {
-	background-color: red;
+	width: 80%;
+	display: flex;
 }

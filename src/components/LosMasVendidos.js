@@ -20,26 +20,23 @@ function Productos(props) {
 
 	return (
 		<>
-			<p>SIII</p>
-			<div style={{ display: "flex" }}>
-				{
-					todo.map((producto) => {
-						const prod = {
-							id: producto.id,
-							marca: producto.marca,
-							modelo: producto.modelo,
-							imagen: producto.imagen,
-						};
-						return (
-							<div>
-								<img style={{ width: "150px" }} key={prod.id} src={`https://clickzapatilla.cl${prod.imagen}`} alt="imagen" />
-								<p>{prod.marca}</p>
-								<p>{prod.modelo}</p>
-							</div>
-						);
-					})
-				}
-			</div>
+			{
+				todo.map((producto) => {
+					const prod = {
+						id: producto.id,
+						marca: producto.marca,
+						modelo: producto.modelo,
+						imagen: producto.imagen,
+					};
+					return (
+						<div key={prod.id}>
+							<img style={{ width: "150px" }} src={`https://clickzapatilla.cl${prod.imagen}`} alt="imagen" />
+							<p>{prod.marca}</p>
+							<p>{prod.modelo}</p>
+						</div>
+					);
+				})
+			}
 		</>
 	);
 }
@@ -65,14 +62,13 @@ const LosMasVendidos = function () {
 			<br />
 			<br />
 			<section id="losmasvendidos" className={css.losmasvendidos}>
-				<div>
+				<div className={css.mensaje}>
 					<h5>los más vendidos</h5>
 					<p>Nos preocupamos obsesivamente por cada detalle de nuestros hoodies, para que se ajuste y se sientan mejor que cualquier otro hoodie que hayas usado.</p>
-					<Boton width="400px" texto="ver los más vendidos" ruta="/tienda" />
+					<Boton texto="ver los más vendidos" ruta="/tienda" />
 				</div>
 				<div className={css.productos}>
-					<h4>PRODUCTOS</h4>
-					{ladata ? <Productos info={ladata} /> : "no"}
+					{ladata ? <Productos info={ladata} /> : (<img style={{ width: "100px", margin: "0 auto", display: "block" }} src="https://codigofuente.io/wp-content/uploads/2018/09/progress.gif" alt="Cargando ..." />)}
 				</div>
 			</section>
 		</>
