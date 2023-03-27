@@ -1,0 +1,55 @@
+#carrusel {
+	position: relative;
+	margin-top: 100px;
+}
+#carrusel > div.mensaje {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	gap: 25%;
+}
+#carrusel > div.mensaje > .izquierda {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#carrusel > div.mensaje > .izquierda h2 {
+	font-size: 10em;
+	letter-spacing: 0.05em;
+	font-weight: 200;
+	color: white;
+}
+#carrusel > div.mensaje > .derecha {
+	cursor: pointer;
+	margin-bottom: 60px;
+}
+#carrusel > div.mensaje > .derecha img {
+	width: 30px;
+}
+#carrusel > div > video {
+	width: 100%;
+	height: 100%;
+}
+
+@media ( max-width: 850px ) {
+	#carrusel > div.mensaje {
+		gap: 0;
+	}
+	#carrusel > div.mensaje > .izquierda h2 {
+		font-size: 3em;
+	}
+	#carrusel > div.mensaje > .izquierda a {
+		width: 80%;
+		font-size: 0.7em;
+		height: 40px;
+	}
+	#carrusel > div.mensaje > .derecha img {
+		display: none;
+	}
+}

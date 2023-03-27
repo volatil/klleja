@@ -1,5 +1,7 @@
 import Boton from "./Boton";
 
+import css from "@/styles/Carrusel.module.css";
+
 function scrollTo() {
 	const element = document.getElementById("losmasvendidos");
 	element.scrollIntoView({ behavior: "smooth" });
@@ -7,28 +9,18 @@ function scrollTo() {
 
 function Carrusel() {
 	return (
-		<section id="carrusel" style={{ position: "relative" }}>
-			<div style={{
-				display: "flex", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", zIndex: "1", position: "absolute", width: "100%", height: "100%", gap: "25%",
-			}}
-			>
-				<div style={{
-					display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center",
-				}}
-				>
-					<h2 style={{
-						fontSize: "10em", letterSpacing: "0.05em", fontWeight: "300", color: "white",
-					}}
-					>VISÍTANOS
-					</h2>
+		<section id={css.carrusel}>
+			<div className={css.mensaje}>
+				<div className={css.izquierda}>
+					<h2>VISÍTANOS</h2>
 					<Boton texto="ver ubicación" ruta="/ubicacion" />
 				</div>
-				<div role="presentation" style={{ cursor: "pointer", marginBottom: "60px" }} onClick={() => scrollTo()}>
-					<img style={{ width: "30px" }} src="assets/svg/arrowScrollDown.svg" alt="bajar" />
+				<div className={css.derecha} role="presentation" onClick={() => scrollTo()}>
+					<img src="assets/svg/arrowScrollDown.svg" alt="bajar" />
 				</div>
 			</div>
 			<div>
-				<video style={{ width: "100%", height: "100%" }} width="320" height="240" autoPlay muted loop>
+				<video autoPlay muted loop>
 					{/*
 						https://pixabay.com/es/videos/search/surf/
 						https://pixabay.com/es/videos/tablista-portugal-algarve-costa-13772/

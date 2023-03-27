@@ -16,7 +16,7 @@ function Header(props) {
 
 	return (
 		<>
-			<header className={ishome ? `${css.header} ${css.estoyenelhome}` : `${css.header}`}>
+			<header data-desplegado={desplegarMenu ? "si" : "no"} className={ishome ? `${css.header} ${css.estoyenelhome}` : `${css.header}`}>
 				<div>
 					{ !desplegarMenu && <Logo /> }
 				</div>
