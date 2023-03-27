@@ -27,3 +27,13 @@
 	width: 80%;
 	display: flex;
 }
+.losmasvendidos .productos .producto {
+	width: 25%;
+}
+.losmasvendidos .productos .producto img {
+	width: 100%;
+}
+.losmasvendidos .productos .producto .precio {
+	color: var(--rojo);
+	font-weight: bold;
+}

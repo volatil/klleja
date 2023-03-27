@@ -1,18 +1,21 @@
 import { useState, useEffect } from "react";
 import css from "@/styles/LosMasVendidos.module.css";
 
-import API from "@/helpers/CONST";
+import { API } from "@/helpers/CONST";
+import precio from "@/helpers/helpers";
 import Boton from "./Boton";
 
 function Productos(props) {
 	const { info } = props;
 	const todo = [];
-	for ( let count = 1; count <= 2; count++ ) {
+	// for ( let count = 1; count <= info.length - 1; count++ ) {
+	for ( let count = 1; count <= 4; count++ ) {
 		const p = {
 			id: info[count][0],
-			marca: info[count][2],
-			modelo: info[count][3],
-			imagen: String(info[count][7]).replaceAll("./", "/"),
+			nombre: info[count][2],
+			precio: precio(info[count][3]),
+			imagen: info[count][6],
+			descripcion: info[count][7],
 		};
 		todo.push( p );
 	}
@@ -24,15 +27,16 @@ function Productos(props) {
 				todo.map((producto) => {
 					const prod = {
 						id: producto.id,
-						marca: producto.marca,
-						modelo: producto.modelo,
+						nombre: producto.nombre,
+						precio: producto.precio,
 						imagen: producto.imagen,
+						descripcion: producto.descripcion,
 					};
 					return (
-						<div key={prod.id}>
-							<img style={{ width: "150px" }} src={`https://clickzapatilla.cl${prod.imagen}`} alt="imagen" />
-							<p>{prod.marca}</p>
-							<p>{prod.modelo}</p>
+						<div className={css.producto} key={prod.id}>
+							<img src={prod.imagen} alt="imagen" />
+							<p>{prod.nombre}</p>
+							<p className={css.precio}>$ {prod.precio}</p>
 						</div>
 					);
 				})

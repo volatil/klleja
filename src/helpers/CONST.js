@@ -1,2 +1,2 @@
-const API = "https://sheets.googleapis.com/v4/spreadsheets/1aZlC5KaMoyEPVqbMiH8_bPCsZoh65PBW9cm0HpG8Kjk/values/inventario?key=AIzaSyAOWV0qar-gsYcyp5yWS99GQlPVovkuxcU";
-export default API;
+export const API = "https://sheets.googleapis.com/v4/spreadsheets/1sjRNViAscU-h87WoA9v97vTPTC1lz4EZQuQFA5D7zuU/values/inventario?key=AIzaSyAOWV0qar-gsYcyp5yWS99GQlPVovkuxcU";
+export const COMETA = 10000;
