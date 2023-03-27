@@ -21,7 +21,6 @@ function Productos(props) {
 		};
 		todo.push( p );
 	}
-	console.debug( todo );
 
 	return (
 		<>

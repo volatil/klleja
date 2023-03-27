@@ -9,11 +9,7 @@ const trae = function () {
 };
 
 const imprime = async function () {
-	console.debug( "llamando" );
 	const dataDB = await trae();
-	console.debug( "recibiendo" );
-	console.debug( dataDB ? "si hay data" : "no hay data" );
-	console.debug( dataDB );
 	return dataDB;
 };
 export default imprime;
