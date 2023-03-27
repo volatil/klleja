@@ -1,5 +1,4 @@
 .header {
-	/* background: white; */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -83,8 +82,22 @@ li.tamosactivo span ,
 	z-index: -1;
 	margin: 0 auto;
 }
-
 .header .derecha {
 	display: flex;
 	gap: 60px;
+}
+
+@media ( max-width: 850px ) {
+	.navMenu > ul {
+		margin: 120px auto 0;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+	.navMenu > ul > li > a {
+		font-size: 2em;
+	}
+	.navMenu > ul > li.tamosactivo span {
+		width: 80%;
+	}
 }
