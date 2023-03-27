@@ -12,3 +12,14 @@
 	color: var(--rojo);
 	font-weight: bold;
 }
+
+@media ( max-width: 850px ) {
+	.productos {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.productos .producto {
+		width: 100%;
+	}
+}

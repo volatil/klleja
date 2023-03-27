@@ -23,3 +23,13 @@
 	width: 90%;
 	font-size: 0.5em;
 }
+
+@media ( max-width: 850px ) {
+	.losmasvendidos {
+		display: flex;
+		flex-direction: column;
+	}
+	.losmasvendidos .mensaje {
+		width: 100%;
+	}
+}
