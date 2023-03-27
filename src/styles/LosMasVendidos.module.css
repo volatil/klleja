@@ -3,6 +3,22 @@
 	justify-content: space-between;
 	align-items: center;
 }
+.losmasvendidos > div:first-of-type {
+	width: 20%;
+}
+.losmasvendidos > div > h5 {
+	font-size: 4em;
+	line-height: 0.9em;
+}
+.losmasvendidos > div > h5::first-letter {
+	text-transform: capitalize;
+}
+.losmasvendidos > div > p {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
 .losmasvendidos .productos {
 	background-color: red;
+	width: 80%;
+	background: red;
 }
