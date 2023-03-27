@@ -68,7 +68,7 @@ const LosMasVendidos = function () {
 					<Boton texto="ver los más vendidos" ruta="/tienda" />
 				</div>
 				<div className={css.productos}>
-					{ladata ? <Productos info={ladata} /> : (<img style={{ width: "100px", margin: "0 auto", display: "block" }} src="https://codigofuente.io/wp-content/uploads/2018/09/progress.gif" alt="Cargando ..." />)}
+					{ladata ? <Productos info={ladata} /> : (<img className="loading" style={{ width: "100px", margin: "0 auto", display: "block" }} src="https://codigofuente.io/wp-content/uploads/2018/09/progress.gif" alt="Cargando ..." />)}
 				</div>
 			</section>
 		</>
