@@ -9,21 +9,37 @@ function Productos(props) {
 	const todo = [];
 	for ( let count = 1; count <= 2; count++ ) {
 		const p = {
+			id: info[count][0],
+			marca: info[count][2],
+			modelo: info[count][3],
 			imagen: String(info[count][7]).replaceAll("./", "/"),
 		};
-		todo.push( p.imagen );
+		todo.push( p );
 	}
 	console.debug( todo );
 
 	return (
 		<>
 			<p>SIII</p>
-			{
-				todo.map((imagen) => {
-					const completo = imagen;
-					return (<img key={completo} src={`https://clickzapatilla.cl${completo}`} alt="imagen" />);
-				})
-			}
+			<div style={{ display: "flex" }}>
+				{
+					todo.map((producto) => {
+						const prod = {
+							id: producto.id,
+							marca: producto.marca,
+							modelo: producto.modelo,
+							imagen: producto.imagen,
+						};
+						return (
+							<div>
+								<img style={{ width: "150px" }} key={prod.id} src={`https://clickzapatilla.cl${prod.imagen}`} alt="imagen" />
+								<p>{prod.marca}</p>
+								<p>{prod.modelo}</p>
+							</div>
+						);
+					})
+				}
+			</div>
 		</>
 	);
 }
@@ -35,8 +51,6 @@ const LosMasVendidos = function () {
 		async function trae() {
 			const traido = await fetch(API);
 			const data = await traido.json();
-			// console.debug( "recibiendo" );
-			// console.debug(data.values);
 			setladata(data.values);
 		}
 		trae();
