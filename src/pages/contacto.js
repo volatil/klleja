@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Header from "@/components/Header";
+import TituloPagina from "@/components/TituloPagina";
 import Footer from "@/components/Footer";
 
 function contacto() {
@@ -14,7 +15,7 @@ function contacto() {
 			</Head>
 			<Header />
 			<main>
-				<h2>CONTACTO</h2>
+				<TituloPagina titulo="contacto" />
 			</main>
 			<Footer />
 		</>

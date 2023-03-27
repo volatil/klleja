@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Header from "@/components/Header";
+import TituloPagina from "@/components/TituloPagina";
 import Footer from "@/components/Footer";
 
 const politicadeprivacidad = function () {
@@ -14,7 +15,7 @@ const politicadeprivacidad = function () {
 			</Head>
 			<Header />
 			<main>
-				<h3>Política de privacidad</h3>
+				<TituloPagina titulo="Política de privacidad" />
 			</main>
 			<Footer />
 		</>

@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Header from "@/components/Header";
+import TituloPagina from "@/components/TituloPagina";
 import Footer from "@/components/Footer";
 
 const configuraciondecookies = function () {
@@ -14,7 +15,7 @@ const configuraciondecookies = function () {
 			</Head>
 			<Header />
 			<main>
-				<h3>Configuración de cookies</h3>
+				<TituloPagina titulo="Configuración de cookies" />
 			</main>
 			<Footer />
 		</>

@@ -1,0 +1,22 @@
+#titulopagina {
+	background: radial-gradient(circle, rgba(239,250,255,1) 0%, rgba(217,231,255,1) 100%);
+	height: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2.2em;
+	letter-spacing: 0.05em;
+}
+#titulopagina > h2 {
+	color: #05779a;
+	text-transform: uppercase;
+}
+
+@media ( max-width: 850px ) {
+	#titulopagina {
+		height: 60px;
+	}
+	#titulopagina > h2 {
+		font-size: 0.5em;
+	}
+}

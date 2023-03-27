@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Header from "@/components/Header";
+import TituloPagina from "@/components/TituloPagina";
 import Footer from "@/components/Footer";
 
 const terminosycondiciones = function () {
@@ -14,7 +15,7 @@ const terminosycondiciones = function () {
 			</Head>
 			<Header />
 			<main>
-				<h3>Términos y condiciones</h3>
+				<TituloPagina titulo="Términos y condiciones" />
 			</main>
 			<Footer />
 		</>
