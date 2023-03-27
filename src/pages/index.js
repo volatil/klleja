@@ -19,7 +19,7 @@ export default function Home() {
 			</Head>
 			<Header ishome />
 			<main>
-				<Carrusel />
+				{/* <Carrusel /> */}
 				<LosMasVendidos />
 			</main>
 			<Footer />
