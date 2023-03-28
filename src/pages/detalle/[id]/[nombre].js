@@ -6,9 +6,9 @@ import { API } from "@/helpers/CONST";
 import precio from "@/helpers/helpers";
 
 import Header from "@/components/Header";
-import TituloPagina from "@/components/TituloPagina";
 import Footer from "@/components/Footer";
-import Productos from "@/components/Productos";
+
+import detalle from "@/styles/Detalle.module.css";
 
 // export async function getServerSideProps() {
 // 	// Fetch data from external API
@@ -18,6 +18,61 @@ import Productos from "@/components/Productos";
 // 	// Pass data to the page via props
 // 	return { props: { data } };
 // }
+
+const Producto = function (props) {
+	const { info } = props;
+	const p = {
+		nombre: info[2],
+		precio: precio(info[3]),
+		tallas: info[4].split(","),
+		color: info[5],
+		imagen: info[6],
+		descripcion: info[7],
+		categorias: info[8].split(","),
+	};
+	return (
+		<div className={detalle.producto}>
+			<div className={detalle.imagen}>
+				<img style={{ width: "400px" }} src={p.imagen} alt={p.nombre} />
+			</div>
+			<div className="informacion">
+				<h5>{p.nombre}</h5>
+				<div className={detalle.tallas}>
+					<p>Talla:</p>
+					<select>
+						<option value="vacio">Selecciona tu talla</option>
+						{
+							p.tallas?.map((talla) => {
+								return (
+									<option key={talla} value={talla}>{talla}</option>
+								);
+							})
+						}
+					</select>
+				</div>
+				<div className={detalle.precio}>
+					<p>$ {p.precio}</p>
+				</div>
+				<div className={detalle.descripcion}>
+					<strong>DESCRIPCION</strong>
+					<p>{p.descripcion}</p>
+				</div>
+				<div className={detalle.categorias}>
+					<strong>CATEGORIAS</strong>
+					<ul>
+						{
+							p.categorias.map((categoria) => {
+								return (
+									<li key={categoria}>{categoria}</li>
+								);
+							})
+						}
+					</ul>
+				</div>
+			</div>
+		</div>
+	);
+};
 
 const Detalle = function () {
 	const [ladata, setladata] = useState(null);
@@ -32,19 +87,8 @@ const Detalle = function () {
 			data = await data.values;
 			const productoexacto = await data[id];
 			setladata( productoexacto );
-			console.debug( "test repeticion" );
-			// console.debug( productoexacto );
-			// if ( ladata ) {
-			// 	const p = {
-			// 		elid: ladata[0],
-			// 		nombre: ladata[2],
-			// 		precio: precio(ladata[3]),
-			// 		imagen: ladata[6],
-			// 		descripcion: ladata[7],
-			// 	};
-			// 	console.debug( p.nombre );
-			// }
 		}
+		console.debug( "test repeticion" );
 		trae();
 	}, [id]);
 
@@ -58,18 +102,10 @@ const Detalle = function () {
 			</Head>
 			<Header />
 			<main>
-				<TituloPagina titulo={`Producto: ${id} ${nombre}`} />
-				{/* <Productos info={ladata} /> */}
-				{/* <h4>{ladata ? "si" : "no"}</h4>
-				<h4>{ladata || "nada"}</h4> */}
 				{
 					ladata
-						&& (
-							<>
-								<h5>{ladata[2]}</h5>
-								<img src={ladata[6]} alt={ladata[2]} />
-							</>
-						)
+						? <Producto info={ladata} />
+						: (<img className="loading" style={{ width: "100px", margin: "0 auto", display: "block" }} src="https://codigofuente.io/wp-content/uploads/2018/09/progress.gif" alt="Cargando ..." />)
 				}
 			</main>
 			<Footer />

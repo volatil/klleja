@@ -74,7 +74,11 @@ function Tienda() {
 			<main>
 				<TituloPagina titulo="tienda" />
 				<section className={cssprod.productos}>
-					{ladata ? <Productos info={ladata} /> : (<img className="loading" style={{ width: "100px", margin: "0 auto", display: "block" }} src="https://codigofuente.io/wp-content/uploads/2018/09/progress.gif" alt="Cargando ..." />)}
+					{
+						ladata
+							? <Productos info={ladata} />
+							: (<img className="loading" style={{ width: "100px", margin: "0 auto", display: "block" }} src="https://codigofuente.io/wp-content/uploads/2018/09/progress.gif" alt="Cargando ..." />)
+					}
 				</section>
 			</main>
 			<Footer />
