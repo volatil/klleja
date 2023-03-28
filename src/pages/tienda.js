@@ -38,7 +38,7 @@ function Productos(props) {
 					};
 					return (
 						// <Link href={{ pathname: "/detalle/[id]", query: { id: prod.id } }} className={cssprod.producto} key={prod.id}>
-						<Link href={`/detalle/${[prod.id]}`} className={cssprod.producto} key={prod.id}>
+						<Link href={`/detalle/${[prod.id]}/${[prod.nombre]}`} className={cssprod.producto} key={prod.id}>
 							<img src={prod.imagen} alt="imagen" />
 							<p>{prod.nombre}</p>
 							<p className={cssprod.precio}>$ {prod.precio}</p>

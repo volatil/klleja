@@ -1,3 +1,4 @@
+import Link from "next/link";
 import precio from "@/helpers/helpers";
 
 import cssprod from "@/styles/GrillaProductos.module.css";
@@ -29,11 +30,11 @@ function Productos(props) {
 						descripcion: producto.descripcion,
 					};
 					return (
-						<div className={cssprod.producto} key={prod.id}>
+						<Link href={`/detalle/${[prod.id]}/${[prod.nombre]}`} className={cssprod.producto} key={prod.id}>
 							<img src={prod.imagen} alt="imagen" />
 							<p>{prod.nombre}</p>
 							<p className={cssprod.precio}>$ {prod.precio}</p>
-						</div>
+						</Link>
 					);
 				})
 			}
