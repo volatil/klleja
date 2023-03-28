@@ -12,7 +12,7 @@ function BotonComprar(props) {
 	const ruta = `https://api.whatsapp.com/send?phone=${data.numero}&text=${data.mensaje}`;
 
 	return (
-		<Link style={{ width: `${width}` }} className={estilo.botonComponent} href={ruta}>
+		<Link target="_blank" style={{ width: `${width}` }} className={estilo.botonComponent} href={ruta}>
 			<p>{texto || "propiedad 'texto' ?"}</p>
 		</Link>
 	);

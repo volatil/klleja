@@ -6,6 +6,7 @@ import { API } from "@/helpers/CONST";
 import precio from "@/helpers/helpers";
 
 import Header from "@/components/Header";
+import Breadcrumb from "@/components/Breadcrumb";
 import BotonComprar from "@/components/BotonComprar";
 import Footer from "@/components/Footer";
 
@@ -20,6 +21,29 @@ import detalle from "@/styles/Detalle.module.css";
 // 	return { props: { data } };
 // }
 
+const UISelect = function (props) {
+	const { data, valorinicial } = props;
+	return (
+		<>
+			<br />
+			<br />
+			<br />
+			<ul>
+				<li>{valorinicial}</li>
+				{
+					data.map((valor) => {
+						return (<li key={valor}>{valor}</li>);
+					})
+				}
+			</ul>
+			<br />
+			<br />
+			<br />
+			<br />
+		</>
+	);
+};
+
 const Producto = function (props) {
 	const { info } = props;
 	const p = {
@@ -33,53 +57,57 @@ const Producto = function (props) {
 		categorias: info[8].split(","),
 	};
 	return (
-		<div className={detalle.producto}>
-			<div className={detalle.imagen}>
-				<img style={{ width: "400px" }} src={p.imagen} alt={p.nombre} />
+		<>
+			<Breadcrumb />
+			<div className={detalle.producto}>
+				<div className={detalle.imagen}>
+					<img src={p.imagen} alt={p.nombre} />
+				</div>
+				<div className={detalle.informacion}>
+					<h5>{p.nombre}</h5>
+					<div className={detalle.tallas}>
+						<p>Talla</p>
+						<select>
+							<option value="vacio">Selecciona tu talla</option>
+							{
+								p.tallas?.map((talla) => {
+									return (
+										<option key={talla} value={talla}>{talla}</option>
+									);
+								})
+							}
+						</select>
+						<UISelect data={p.tallas} valorinicial="Selecciona tu talla" />
+					</div>
+					<div className={detalle.precio}>
+						<p>$ {p.precio}</p>
+					</div>
+					<BotonComprar texto="COMPRAR" id={p.id} nombre={p.nombre} />
+					<div className={detalle.descripcion}>
+						<strong>DESCRIPCION</strong>
+						<p>{p.descripcion}</p>
+					</div>
+					<div className={detalle.envioydevoluciones}>
+						<strong>Envío y devoluciones</strong>
+						<p>Envío estándar por Chilexpress.</p>
+						<p>El periodo de entrega para el producto personalizado es de 7 a 14 días.</p>
+						<p>Los plazos de devolución son de 30 días desde la confirmación de la entrega del producto.</p>
+					</div>
+					<div className={detalle.categorias}>
+						<strong>CATEGORIAS</strong>
+						<ul>
+							{
+								p.categorias.map((categoria) => {
+									return (
+										<li key={categoria}>{categoria}</li>
+									);
+								})
+							}
+						</ul>
+					</div>
+				</div>
 			</div>
-			<div className="informacion">
-				<h5>{p.nombre}</h5>
-				<div className={detalle.tallas}>
-					<p>Talla:</p>
-					<select>
-						<option value="vacio">Selecciona tu talla</option>
-						{
-							p.tallas?.map((talla) => {
-								return (
-									<option key={talla} value={talla}>{talla}</option>
-								);
-							})
-						}
-					</select>
-				</div>
-				<div className={detalle.precio}>
-					<p>$ {p.precio}</p>
-				</div>
-				<BotonComprar texto="COMPRAR" id={p.id} nombre={p.nombre} />
-				<div className={detalle.descripcion}>
-					<strong>DESCRIPCION</strong>
-					<p>{p.descripcion}</p>
-				</div>
-				<div className={detalle.envioydevoluciones}>
-					<strong>Envío y devoluciones</strong>
-					<p>Envío estándar por Chilexpress.</p>
-					<p>El periodo de entrega para el producto personalizado es de 7 a 14 días.</p>
-					<p>Los plazos de devolución son de 30 días desde la confirmación de la entrega del producto.</p>
-				</div>
-				<div className={detalle.categorias}>
-					<strong>CATEGORIAS</strong>
-					<ul>
-						{
-							p.categorias.map((categoria) => {
-								return (
-									<li key={categoria}>{categoria}</li>
-								);
-							})
-						}
-					</ul>
-				</div>
-			</div>
-		</div>
+		</>
 	);
 };
 
