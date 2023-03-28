@@ -6,6 +6,7 @@ import { API } from "@/helpers/CONST";
 import precio from "@/helpers/helpers";
 
 import Header from "@/components/Header";
+import BotonComprar from "@/components/BotonComprar";
 import Footer from "@/components/Footer";
 
 import detalle from "@/styles/Detalle.module.css";
@@ -22,6 +23,7 @@ import detalle from "@/styles/Detalle.module.css";
 const Producto = function (props) {
 	const { info } = props;
 	const p = {
+		id: info[0],
 		nombre: info[2],
 		precio: precio(info[3]),
 		tallas: info[4].split(","),
@@ -53,9 +55,16 @@ const Producto = function (props) {
 				<div className={detalle.precio}>
 					<p>$ {p.precio}</p>
 				</div>
+				<BotonComprar texto="COMPRAR" id={p.id} nombre={p.nombre} />
 				<div className={detalle.descripcion}>
 					<strong>DESCRIPCION</strong>
 					<p>{p.descripcion}</p>
+				</div>
+				<div className={detalle.envioydevoluciones}>
+					<strong>Envío y devoluciones</strong>
+					<p>Envío estándar por Chilexpress.</p>
+					<p>El periodo de entrega para el producto personalizado es de 7 a 14 días.</p>
+					<p>Los plazos de devolución son de 30 días desde la confirmación de la entrega del producto.</p>
 				</div>
 				<div className={detalle.categorias}>
 					<strong>CATEGORIAS</strong>

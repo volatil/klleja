@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 // import trae from "@/services/api";
-import Boton from "./Boton";
+import Boton from "./BotonRuta";
 import Productos from "./Productos";
 
 import { API } from "@/helpers/CONST";

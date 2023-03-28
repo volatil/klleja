@@ -1,7 +1,7 @@
 import Link from "next/link";
 import estilo from "@/styles/Boton.module.css";
 
-function Boton(props) {
+function BotonRuta(props) {
 	const { texto, ruta, width } = props;
 
 	return (
@@ -11,4 +11,4 @@ function Boton(props) {
 		</Link>
 	);
 }
-export default Boton;
+export default BotonRuta;

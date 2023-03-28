@@ -30,7 +30,7 @@ function Productos(props) {
 						descripcion: producto.descripcion,
 					};
 					return (
-						<Link href={`/detalle/${[prod.id]}/${[prod.nombre]}`} className={cssprod.producto} key={prod.id}>
+						<Link href={`/producto/${[prod.id]}/${[prod.nombre]}`} className={cssprod.producto} key={prod.id}>
 							<img src={prod.imagen} alt="imagen" />
 							<p>{prod.nombre}</p>
 							<p className={cssprod.precio}>$ {prod.precio}</p>
