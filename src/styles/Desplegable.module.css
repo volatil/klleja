@@ -1,0 +1,22 @@
+.desplegable {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 8px;
+	margin-bottom: 12px;
+}
+.desplegable > .titulo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.desplegable > .titulo > p {
+	font-size: 1.2em;
+	font-weight: 500;
+}
+.desplegable > .titulo > img {
+	width: 15px;
+}
+.desplegable > .contenido {
+	margin: 5px 0;
+}

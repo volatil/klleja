@@ -1,5 +1,5 @@
 import Link from "next/link";
-import estilo from "@/styles/Boton.module.css";
+import estilo from "@/styles/BotonRuta.module.css";
 
 function BotonRuta(props) {
 	const { texto, ruta, width } = props;

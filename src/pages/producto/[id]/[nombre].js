@@ -11,6 +11,7 @@ import BotonComprar from "@/components/BotonComprar";
 import Footer from "@/components/Footer";
 
 import detalle from "@/styles/Detalle.module.css";
+import Desplegable from "@/components/Desplegable";
 
 // export async function getServerSideProps() {
 // 	// Fetch data from external API
@@ -20,29 +21,6 @@ import detalle from "@/styles/Detalle.module.css";
 // 	// Pass data to the page via props
 // 	return { props: { data } };
 // }
-
-const UISelect = function (props) {
-	const { data, valorinicial } = props;
-	return (
-		<>
-			<br />
-			<br />
-			<br />
-			<ul>
-				<li>{valorinicial}</li>
-				{
-					data.map((valor) => {
-						return (<li key={valor}>{valor}</li>);
-					})
-				}
-			</ul>
-			<br />
-			<br />
-			<br />
-			<br />
-		</>
-	);
-};
 
 const Producto = function (props) {
 	const { info } = props;
@@ -77,33 +55,28 @@ const Producto = function (props) {
 								})
 							}
 						</select>
-						<UISelect data={p.tallas} valorinicial="Selecciona tu talla" />
 					</div>
 					<div className={detalle.precio}>
 						<p>$ {p.precio}</p>
 					</div>
 					<BotonComprar texto="COMPRAR" id={p.id} nombre={p.nombre} />
-					<div className={detalle.descripcion}>
-						<strong>DESCRIPCION</strong>
-						<p>{p.descripcion}</p>
-					</div>
-					<div className={detalle.envioydevoluciones}>
-						<strong>Envío y devoluciones</strong>
+					<Desplegable titulo="DESCRIPCIÓN">{p.descripcion}</Desplegable>
+					<Desplegable titulo="Envío y devoluciones">
 						<p>Envío estándar por Chilexpress.</p>
 						<p>El periodo de entrega para el producto personalizado es de 7 a 14 días.</p>
 						<p>Los plazos de devolución son de 30 días desde la confirmación de la entrega del producto.</p>
-					</div>
+					</Desplegable>
 					<div className={detalle.categorias}>
-						<strong>CATEGORIAS</strong>
-						<ul>
+						<p>
+							<strong>Categorias:</strong> {" "}
 							{
 								p.categorias.map((categoria) => {
 									return (
-										<li key={categoria}>{categoria}</li>
+										<span key={categoria}>{categoria}</span>
 									);
 								})
 							}
-						</ul>
+						</p>
 					</div>
 				</div>
 			</div>

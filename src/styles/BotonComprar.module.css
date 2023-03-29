@@ -1,0 +1,28 @@
+.botonComponent {
+	background-color: var( --cyan );
+	height: 40px;
+	width: 100%;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition:    all 0.2s ease-out;
+	-o-transition:      all 0.2s ease-out;
+	transition:         all 0.2s ease-out;
+}
+.botonComponent:hover {
+	background-color: var( --cyanHover );
+}
+.botonComponent > p {
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-size: 1.4em;
+	font-weight: 300;
+}
+.botonComponent > img {
+	width: 25px;
+}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import estilo from "@/styles/Boton.module.css";
+import estilo from "@/styles/BotonComprar.module.css";
 
 function BotonComprar(props) {
 	const {

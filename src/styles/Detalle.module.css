@@ -7,17 +7,21 @@
 	width: 100%;
 }
 .producto .informacion {
-	width: 30%;
+	width: 40%;
 }
 .producto .informacion h5 {
 	font-size: 2.3em;
 	line-height: 1em;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 .producto .tallas {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 30px;
+}
+.producto .tallas > p {
+	margin-bottom: 5px;
 }
 .producto .tallas > select {
 	width: 100%;
@@ -26,4 +30,23 @@
 	text-transform: uppercase;
 	font-weight: bold;
 	cursor: pointer;
+}
+.producto .precio {
+	margin-bottom: 10px;
+}
+.producto .precio > p {
+	font-weight: 600;
+	font-size: 1.5em;
+}
+.producto .categorias {
+	margin-top: 30px;
+}
+.producto .categorias > p > strong {
+	font-weight: 500;
+}
+.producto .categorias > p > span::after {
+	content: ", ";
+}
+.producto .categorias > p > span:last-of-type::after {
+	content: "";
 }
