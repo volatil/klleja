@@ -17,11 +17,13 @@ function Header(props) {
 	return (
 		<>
 			<header data-desplegado={desplegarMenu ? "si" : "no"} className={ishome ? `${css.header} ${css.estoyenelhome}` : `${css.header}`}>
-				<div>
-					{ !desplegarMenu && <Logo /> }
+				<div className={css.logo}>
+					<Logo />
 				</div>
 				<div className={css.derecha}>
-					{ !desplegarMenu && <Buscador sedespliega={desplegarMenu} /> }
+					<div className={css.elbuscador}>
+						<Buscador sedespliega={desplegarMenu} />
+					</div>
 					<div className={css.menu} role="presentation" onClick={handleClick}>
 						<p className={!desplegarMenu ? null : `${css.menudesplegado}`}>MENU</p>
 						<img src={desplegarMenu ? "/assets/svg/menuAbierto.svg" : "/assets/svg/menuCerrado.svg"} alt="MENU" />

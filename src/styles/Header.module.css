@@ -20,6 +20,10 @@
 .header > div > img.lupa {
 	width: auto;
 }
+.header[data-desplegado=si] .logo ,
+.header[data-desplegado=si] .derecha .elbuscador {
+	visibility: hidden;
+}
 .menu {
 	display: flex;
 	align-items: center;
