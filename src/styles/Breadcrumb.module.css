@@ -21,3 +21,9 @@
 #breadcrumb > li:last-of-type::after {
 	content: "";
 }
+@media ( max-width: 850px ) {
+	#breadcrumb {
+		width: 96%;
+		margin-left: 4%;
+	}
+}

@@ -50,3 +50,15 @@
 .producto .categorias > p > span:last-of-type::after {
 	content: "";
 }
+
+@media ( max-width: 850px ) {
+	.producto {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.producto .informacion {
+		width: 88%;
+		margin: 30px auto 0;
+	}
+}
