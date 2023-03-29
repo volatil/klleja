@@ -14,7 +14,6 @@ function Productos(props) {
 	const { info } = props;
 	const todo = [];
 	for ( let count = 1; count <= info.length - 1; count++ ) {
-	// for ( let count = 1; count <= 4; count++ ) {
 		const p = {
 			id: info[count][0],
 			nombre: info[count][2],
@@ -39,9 +38,13 @@ function Productos(props) {
 					return (
 						// <Link href={{ pathname: "/producto/[id]", query: { id: prod.id } }} className={cssprod.producto} key={prod.id}>
 						<Link href={`/producto/${[prod.id]}/${[prod.nombre]}`} className={cssprod.producto} key={prod.id}>
-							<img src={prod.imagen} alt="imagen" />
-							<p>{prod.nombre}</p>
-							<p className={cssprod.precio}>$ {prod.precio}</p>
+							<div className={cssprod.imagen}>
+								<img src={prod.imagen} alt="imagen" />
+							</div>
+							<div className={cssprod.informacion}>
+								<p>{prod.nombre}</p>
+								<p className={cssprod.precio}>$ {prod.precio}</p>
+							</div>
 						</Link>
 					);
 				})

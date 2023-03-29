@@ -15,11 +15,19 @@
 
 @media ( max-width: 850px ) {
 	.productos {
+		margin-top: 20px;
 		display: flex;
-		flex-direction: column;
+		flex-wrap: wrap;
 		width: 100%;
+		gap: 4%;
+		justify-content: center;
 	}
 	.productos .producto {
-		width: 100%;
+		width: 45%;
+		/* display: flex; */
+		/* margin: 10px 0; */
 	}
+	/* .productos .producto .imagen {
+		width: 40%;
+	} */
 }
