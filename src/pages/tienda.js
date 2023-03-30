@@ -96,7 +96,7 @@ function Tienda() {
 					{
 						ladata
 							? <Productos info={ladata} />
-							: (<img className="loading" style={{ width: "100px", margin: "0 auto", display: "block" }} src="https://codigofuente.io/wp-content/uploads/2018/09/progress.gif" alt="Cargando ..." />)
+							: (<img className="loading" style={{ width: "100px", margin: "0 auto", display: "block" }} src="/assets/images/loading.webp" alt="Cargando ..." />)
 					}
 				</section>
 			</main>
