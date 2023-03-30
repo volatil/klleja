@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 import { API, HEAD } from "@/helpers/CONST";
-import precio from "@/helpers/helpers";
+import { precio } from "@/helpers/helpers";
 
 import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";

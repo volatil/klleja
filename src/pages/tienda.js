@@ -7,12 +7,8 @@ import TituloPagina from "@/components/TituloPagina";
 import Footer from "@/components/Footer";
 
 import { API, HEAD } from "@/helpers/CONST";
-import precio from "@/helpers/helpers";
+import { precio, urlBONITA } from "@/helpers/helpers";
 import cssprod from "@/styles/GrillaProductos.module.css";
-
-// export async function getServerSideProps() {
-// 	return { props: { HEAD } };
-// }
 
 function Productos(props) {
 	const { info } = props;
@@ -39,9 +35,11 @@ function Productos(props) {
 						imagen: producto.imagen,
 						descripcion: producto.descripcion,
 					};
+					const url = `/producto/${[prod.id]}/${[urlBONITA(prod.nombre)]}`;
+					// url = urlBONITA(url);
+
 					return (
-						// <Link href={{ pathname: "/producto/[id]", query: { id: prod.id } }} className={cssprod.producto} key={prod.id}>
-						<Link href={`/producto/${[prod.id]}/${[prod.nombre]}`} className={cssprod.producto} key={prod.id}>
+						<Link href={url} className={cssprod.producto} key={prod.id}>
 							<div className={cssprod.imagen}>
 								<img src={prod.imagen} alt="imagen" />
 							</div>
