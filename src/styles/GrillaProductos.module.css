@@ -1,6 +1,7 @@
 .productos {
-	width: 80%;
+	width: 100%;
 	display: flex;
+	gap: 1%;
 }
 .productos .producto {
 	width: 25%;

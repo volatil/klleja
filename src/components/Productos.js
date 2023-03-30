@@ -1,5 +1,5 @@
 import Link from "next/link";
-import precio from "@/helpers/helpers";
+import { precio } from "@/helpers/helpers";
 
 import cssprod from "@/styles/GrillaProductos.module.css";
 
