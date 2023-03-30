@@ -10,12 +10,9 @@ import { API, HEAD } from "@/helpers/CONST";
 import precio from "@/helpers/helpers";
 import cssprod from "@/styles/GrillaProductos.module.css";
 
-export async function getServerSideProps() {
-	// Fetch data from external API
-
-	// Pass data to the page via props
-	return { props: { HEAD } };
-}
+// export async function getServerSideProps() {
+// 	return { props: { HEAD } };
+// }
 
 function Productos(props) {
 	const { info } = props;
@@ -75,29 +72,24 @@ function Tienda() {
 	return (
 		<>
 			<Head>
-				<title>{HEAD.title} | KLLEJA</title>
+				<title>Tienda | KLLEJA</title>
 				<meta name="description" content={HEAD.description} />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 
-				{/* <!-- Primary Meta Tags --> */}
 				<meta name="title" content={HEAD.titleAll} />
-				<meta name="description" content={HEAD.description} />
 
-				{/* <!-- Open Graph / Facebook --> */}
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content={HEAD.url} />
 				<meta property="og:title" content={HEAD.titleAll} />
 				<meta property="og:description" content={HEAD.description} />
 				<meta property="og:image" content={HEAD.image} />
 
-				{/* <!-- Twitter --> */}
 				<meta property="twitter:card" content="summary_large_image" />
 				<meta property="twitter:url" content={HEAD.url} />
 				<meta property="twitter:title" content={HEAD.titleAll} />
 				<meta property="twitter:description" content={HEAD.description} />
 				<meta property="twitter:image" content={HEAD.image} />
-
 			</Head>
 			<Header />
 			<main>

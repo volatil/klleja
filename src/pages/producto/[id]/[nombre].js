@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import { API } from "@/helpers/CONST";
+import { API, HEAD } from "@/helpers/CONST";
 import precio from "@/helpers/helpers";
 
 import Header from "@/components/Header";
@@ -106,9 +106,23 @@ const Detalle = function () {
 		<>
 			<Head>
 				<title>!! | KLLEJA</title>
-				<meta name="description" content="The beat of life" />
+				<meta name="description" content={HEAD.description} />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
+
+				<meta name="title" content={HEAD.titleAll} />
+
+				<meta property="og:type" content="website" />
+				<meta property="og:url" content={HEAD.url} />
+				<meta property="og:title" content={HEAD.titleAll} />
+				<meta property="og:description" content={HEAD.description} />
+				<meta property="og:image" content={HEAD.image} />
+
+				<meta property="twitter:card" content="summary_large_image" />
+				<meta property="twitter:url" content={HEAD.url} />
+				<meta property="twitter:title" content={HEAD.titleAll} />
+				<meta property="twitter:description" content={HEAD.description} />
+				<meta property="twitter:image" content={HEAD.image} />
 			</Head>
 			<Header />
 			<main>
