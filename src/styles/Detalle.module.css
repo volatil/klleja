@@ -1,5 +1,5 @@
 .producto {
-	width: 851px;
+	width: 90%;
 	margin: 0 auto;
 	display: flex;
 }
@@ -7,7 +7,7 @@
 	width: 100%;
 }
 .producto .informacion {
-	width: 40%;
+	width: 45%;
 }
 .producto .informacion h5 {
 	font-size: 2.3em;
