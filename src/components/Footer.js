@@ -7,7 +7,7 @@ const Footer = function () {
 		<footer className={css.footer}>
 			<div className={css.puntas} />
 			<nav>
-				<ul>
+				<ul className={css.paginasinternas}>
 					<li>
 						<Link href="/politicadeprivacidad">
 							<p>Política de privacidad</p>
@@ -22,6 +22,23 @@ const Footer = function () {
 						<Link href="/configuraciondecookies">
 							<p>Configuración de cookies</p>
 						</Link>
+					</li>
+				</ul>
+				<ul className={css.redes}>
+					<li>
+						<a href="#facebook">
+							<img src="/assets/svg/facebook.svg" alt="facebook" />
+						</a>
+					</li>
+					<li>
+						<a href="#twitter">
+							<img src="/assets/svg/twitter.svg" alt="twitter" />
+						</a>
+					</li>
+					<li>
+						<a href="#tiktok">
+							<img src="/assets/svg/tiktok.svg" alt="tiktok" />
+						</a>
 					</li>
 				</ul>
 			</nav>
