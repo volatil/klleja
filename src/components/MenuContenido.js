@@ -15,31 +15,31 @@ function MenuContenido() {
 		<nav className={css.navMenu}>
 			<ul>
 				<li className={tamoactivo("/")}>
-					<Link href="/">
+					<Link href="/" title="inicio">
 						<p>inicio</p>
 						<span />
 					</Link>
 				</li>
 				<li className={tamoactivo("/tienda")}>
-					<Link href="/tienda">
+					<Link href="/tienda" title="tienda">
 						<p>tienda</p>
 						<span />
 					</Link>
 				</li>
 				<li className={tamoactivo("/nosotros")}>
-					<Link href="/nosotros">
+					<Link href="/nosotros" title="nosotros">
 						<p>nosotros</p>
 						<span />
 					</Link>
 				</li>
 				<li className={tamoactivo("/ubicacion")}>
-					<Link href="/ubicacion">
+					<Link href="/ubicacion" title="ubicacion">
 						<p>ubicación</p>
 						<span />
 					</Link>
 				</li>
 				<li className={tamoactivo("/contacto")}>
-					<Link href="/contacto">
+					<Link href="/contacto" title="contacto">
 						<p>contacto</p>
 						<span />
 					</Link>

@@ -21,6 +21,10 @@
 #breadcrumb > li:last-of-type::after {
 	content: "";
 }
+#breadcrumb > li > a:hover {
+	text-decoration: underline;
+	color: var( --cyanHover );
+}
 @media ( max-width: 850px ) {
 	#breadcrumb {
 		width: 96%;

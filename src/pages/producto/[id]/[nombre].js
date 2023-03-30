@@ -40,7 +40,7 @@ const Producto = function (props) {
 	};
 	return (
 		<>
-			<Breadcrumb />
+			<Breadcrumb nombreproducto={p.nombre} />
 			<div className={detalle.producto}>
 				<div className={detalle.imagen}>
 					<img src={p.imagen} alt={p.nombre} />
