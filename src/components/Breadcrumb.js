@@ -9,7 +9,7 @@ function Breadcrumb(props) {
 			<li>
 				<Link href="/tienda">tienda</Link>
 			</li>
-			<img src="/assets/svg/arrowrightbreadcrumb.svg" alt="asdasd" />
+			<img src="/assets/svg/arrowrightbreadcrumb.svg" width="5" height="23" alt="asdasd" />
 			{/* <li>categoria</li> */}
 			<li>{nombreproducto}</li>
 		</ul>

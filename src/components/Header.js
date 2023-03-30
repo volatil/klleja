@@ -26,7 +26,7 @@ function Header(props) {
 					</div>
 					<div className={css.menu} role="presentation" onClick={handleClick}>
 						<p className={!desplegarMenu ? null : `${css.menudesplegado}`}>MENU</p>
-						<img src={desplegarMenu ? "/assets/svg/menuAbierto.svg" : "/assets/svg/menuCerrado.svg"} alt="MENU" />
+						<img src={desplegarMenu ? "/assets/svg/menuAbierto.svg" : "/assets/svg/menuCerrado.svg"} width="40" height="40" alt="MENU" />
 					</div>
 				</div>
 			</header>
