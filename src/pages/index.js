@@ -14,7 +14,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>KLLEJA | The beat of life</title>
+				<title>KLLEJA || The beat of life</title>
 				<meta name="description" content={HEAD.description} />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />

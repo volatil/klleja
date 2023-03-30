@@ -21,16 +21,9 @@ export async function getServerSideProps() {
 	// const router = useRouter();
 	// const { id, nombre } = router.query;
 	// const productoexacto = await data[id];
-	const funciono = ["yo", "creo que ...", "siii"];
-	if (typeof window !== "undefined") {
-		const hostname = window.location.hostname;
-		console.debug( hostname );
-	} else {
-		console.debug( "nose" );
-	}
 
 	// Pass data to the page via props
-	return { props: { dataFetch, funciono } };
+	return { props: { dataFetch } };
 }
 
 const Producto = function (props) {
@@ -95,7 +88,7 @@ const Producto = function (props) {
 	);
 };
 
-const Detalle = function ({ dataFetch, funciono }) {
+const Detalle = function ({ dataFetch }) {
 	const [ladata, setladata] = useState(null);
 
 	const router = useRouter();
@@ -112,8 +105,6 @@ const Detalle = function ({ dataFetch, funciono }) {
 		console.debug( "test repeticion" );
 		trae();
 	}, [id]);
-
-	console.debug( dataFetch[id][2] );
 
 	return (
 		<>
