@@ -113,13 +113,13 @@ const Detalle = function ({ dataFetch, funciono }) {
 		trae();
 	}, [id]);
 
-	console.debug( dataFetch[1][2] );
+	console.debug( dataFetch[id][2] );
 	// console.debug( funciono );
 
 	return (
 		<>
 			<Head>
-				<title>{dataFetch[1][2]} | KLLEJA</title>
+				<title>{dataFetch[id][2]} | KLLEJA</title>
 				<meta name="description" content={HEAD.description} />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
@@ -130,13 +130,13 @@ const Detalle = function ({ dataFetch, funciono }) {
 				<meta property="og:url" content={HEAD.url} />
 				<meta property="og:title" content={HEAD.titleAll} />
 				<meta property="og:description" content={HEAD.description} />
-				<meta property="og:image" content={HEAD.image} />
+				<meta property="og:image" content={dataFetch[id][6]} />
 
 				<meta property="twitter:card" content="summary_large_image" />
 				<meta property="twitter:url" content={HEAD.url} />
 				<meta property="twitter:title" content={HEAD.titleAll} />
 				<meta property="twitter:description" content={HEAD.description} />
-				<meta property="twitter:image" content={HEAD.image} />
+				<meta property="twitter:image" content={dataFetch[id][6]} />
 			</Head>
 			<Header />
 			<main>
