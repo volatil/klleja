@@ -9,21 +9,27 @@
 #breadcrumb > li::first-letter {
 	text-transform: uppercase;
 }
-#breadcrumb > li::after {
+/* #breadcrumb > li::after {
 	content: " /";
 	color: #bbb;
 	margin-left: 5px;
 	margin-right: 10px;
 }
-#breadcrumb > li:last-of-type {
-	color: #999;
-}
 #breadcrumb > li:last-of-type::after {
 	content: "";
+} */
+#breadcrumb > li:last-of-type {
+	color: #999;
 }
 #breadcrumb > li > a:hover {
 	text-decoration: underline;
 	color: var( --cyanHover );
+}
+#breadcrumb > img {
+	width: 5px;
+	margin-left: 9px;
+	margin-right: 11px;
+	opacity: .6;
 }
 @media ( max-width: 850px ) {
 	#breadcrumb {
