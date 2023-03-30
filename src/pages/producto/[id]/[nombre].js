@@ -114,12 +114,11 @@ const Detalle = function ({ dataFetch, funciono }) {
 	}, [id]);
 
 	console.debug( dataFetch[id][2] );
-	// console.debug( funciono );
 
 	return (
 		<>
 			<Head>
-				<title>{dataFetch[id][2]} | KLLEJA</title>
+				<title>{dataFetch[id][2]} || KLLEJA</title>
 				<meta name="description" content={HEAD.description} />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
