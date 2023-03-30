@@ -7,3 +7,8 @@ export const HEAD = {
 	image: "https://klleja.vercel.app/assets/images/logo1200x628.jpg",
 	titleAll: "KLLEJA",
 };
+export const LINKREDES = {
+	facebook: "#facebook_url_pendiente",
+	twitter: "#twitter_url_pendiente",
+	tiktok: "#tiktok_url_pendiente",
+};

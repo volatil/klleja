@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { LINKREDES } from "@/helpers/CONST";
+
 import css from "@/styles/Footer.module.css";
 
 const Footer = function () {
@@ -26,17 +28,17 @@ const Footer = function () {
 				</ul>
 				<ul className={css.redes}>
 					<li>
-						<a href="#facebook">
+						<a href={LINKREDES.facebook}>
 							<img src="/assets/svg/facebook.svg" alt="facebook" />
 						</a>
 					</li>
 					<li>
-						<a href="#twitter">
+						<a href={LINKREDES.twitter}>
 							<img src="/assets/svg/twitter.svg" alt="twitter" />
 						</a>
 					</li>
 					<li>
-						<a href="#tiktok">
+						<a href={LINKREDES.tiktok}>
 							<img src="/assets/svg/tiktok.svg" alt="tiktok" />
 						</a>
 					</li>
