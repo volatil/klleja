@@ -43,7 +43,7 @@ const Producto = function (props) {
 			<Breadcrumb nombreproducto={p.nombre} />
 			<div className={detalle.producto}>
 				<div className={detalle.imagen}>
-					<img src={p.imagen} alt={p.nombre} />
+					<img src={p.imagen} width="660" height="827" alt={p.nombre} />
 				</div>
 				<div className={detalle.informacion}>
 					<h5>{p.nombre}</h5>
