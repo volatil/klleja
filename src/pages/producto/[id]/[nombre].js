@@ -13,14 +13,25 @@ import Footer from "@/components/Footer";
 import detalle from "@/styles/Detalle.module.css";
 import Desplegable from "@/components/Desplegable";
 
-// export async function getServerSideProps() {
-// 	// Fetch data from external API
-// 	const res = await fetch("https://.../data");
-// 	const data = await res.json();
+export async function getServerSideProps() {
+	// Fetch data from external API
+	const traido = await fetch(API);
+	const data = await traido.json();
+	const dataFetch = await data.values;
+	// const router = useRouter();
+	// const { id, nombre } = router.query;
+	// const productoexacto = await data[id];
+	const funciono = ["yo", "creo que ...", "siii"];
+	if (typeof window !== "undefined") {
+		const hostname = window.location.hostname;
+		console.debug( hostname );
+	} else {
+		console.debug( "nose" );
+	}
 
-// 	// Pass data to the page via props
-// 	return { props: { data } };
-// }
+	// Pass data to the page via props
+	return { props: { dataFetch, funciono } };
+}
 
 const Producto = function (props) {
 	const { info } = props;
@@ -84,7 +95,7 @@ const Producto = function (props) {
 	);
 };
 
-const Detalle = function () {
+const Detalle = function ({ dataFetch, funciono }) {
 	const [ladata, setladata] = useState(null);
 
 	const router = useRouter();
@@ -102,10 +113,13 @@ const Detalle = function () {
 		trae();
 	}, [id]);
 
+	console.debug( dataFetch[1][2] );
+	// console.debug( funciono );
+
 	return (
 		<>
 			<Head>
-				<title>!! | KLLEJA</title>
+				<title>{dataFetch[1][2]} | KLLEJA</title>
 				<meta name="description" content={HEAD.description} />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
