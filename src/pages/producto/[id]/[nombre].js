@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 import { API, HEAD } from "@/helpers/CONST";
@@ -18,9 +19,6 @@ export async function getServerSideProps() {
 	const traido = await fetch(API);
 	const data = await traido.json();
 	const dataFetch = await data.values;
-	// const router = useRouter();
-	// const { id, nombre } = router.query;
-	// const productoexacto = await data[id];
 
 	// Pass data to the page via props
 	return { props: { dataFetch } };
@@ -43,7 +41,13 @@ const Producto = function (props) {
 			<Breadcrumb nombreproducto={p.nombre} />
 			<div className={detalle.producto}>
 				<div className={detalle.imagen}>
-					<img src={p.imagen} width="660" height="827" alt={p.nombre} />
+					<Image
+						src={`/assets/images/productos/${p.id}/${p.id}.webp`}
+						priority="high"
+						width={600}
+						height={827}
+						alt={p.nombre}
+					/>
 				</div>
 				<div className={detalle.informacion}>
 					<h5>{p.nombre}</h5>
