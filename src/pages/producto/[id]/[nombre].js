@@ -44,8 +44,12 @@ const Producto = function (props) {
 					<Image
 						src={`/assets/images/productos/${p.id}/${p.id}.webp`}
 						priority="high"
-						width={600}
-						height={827}
+						// width={600}
+						// height={827}
+						fill
+						sizes="(min-width: 768px) 100vw,
+							(min-width: 1200px) 50vw,
+							33vw"
 						alt={p.nombre}
 					/>
 				</div>

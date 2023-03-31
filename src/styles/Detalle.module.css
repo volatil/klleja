@@ -4,8 +4,9 @@
 	display: flex;
 }
 .producto .imagen img {
+	position: relative !important;
+	height: auto !important;
 	width: 100%;
-	height: auto;
 }
 .producto .informacion {
 	width: 45%;
