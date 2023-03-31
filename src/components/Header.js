@@ -21,9 +21,10 @@ function Header(props) {
 					<Logo />
 				</div>
 				<div className={css.derecha}>
+					{/* HABILITAR CUANDO TENGAN DEFINIDO SI SE NECESITA Y QUE BUSCARA */}
+					{/*
 					{ !desplegarMenu && <Buscador /> }
-					{/* <div className={css.elbuscador}>
-					</div> */}
+					*/}
 					<div className={css.menu} role="presentation" onClick={handleClick}>
 						<p className={!desplegarMenu ? null : `${css.menudesplegado}`}>MENU</p>
 						<img src={desplegarMenu ? "/assets/svg/menuAbierto.svg" : "/assets/svg/menuCerrado.svg"} width="40" height="40" alt="MENU" />
