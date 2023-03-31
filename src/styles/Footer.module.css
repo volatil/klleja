@@ -1,3 +1,51 @@
+section#suscripcion {
+	background-color: var(--azul);
+	position: relative;
+	bottom: -20px;
+	padding-bottom: 60px;
+}
+section#suscripcion > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+section#suscripcion > div > p {
+	color: white;
+	text-align: center;
+	padding: 30px 0;
+	font-size: 1.2em;
+}
+section#suscripcion > div > div.suscriptor {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	align-items: center;
+}
+section#suscripcion > div > div.suscriptor > input {
+	outline: none;
+	border: none;
+	width: 250px;
+	height: 40px;
+	padding: 5px 10px;
+}
+section#suscripcion > div > div.suscriptor > button {
+	background-color: black;
+	color: white;
+	width: 100px;
+	border: none;
+	height: 40px;
+	margin-left: 10px;
+	letter-spacing: 0.05em;
+	cursor: pointer;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition:    all 0.2s ease-out;
+	-o-transition:      all 0.2s ease-out;
+	transition:         all 0.2s ease-out;
+}
+section#suscripcion > div > div.suscriptor > button:hover {
+	background-color: #222222;
+}
 .footer {
 	background-color: whitesmoke;
 	position: relative;
@@ -48,6 +96,12 @@
 }
 
 @media ( max-width: 850px ) {
+	section#suscripcion > div > p {
+		width: 90%;
+	}
+	section#suscripcion > div > div.suscriptor {
+		width: 90%;
+	}
 	.footer > nav > ul.paginasinternas {
 		display: flex;
 		flex-direction: column;
