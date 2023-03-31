@@ -88,36 +88,16 @@ li.tamosactivo span ,
 }
 .header .derecha {
 	display: flex;
-	gap: 60px;
+	gap: 40px;
+	width: 50%;
+	justify-content: flex-end;
 }
 
 @media ( max-width: 850px ) {
-	/*
-	.header.estoyenelhome {
-		background-color: white;
-		position: relative;
-		top: 0;
-		width: 100%;
-		z-index: 4;
-		padding: 0;
-	}
-	.navMenu > ul {
-		margin: 120px auto 0;
-		display: flex;
-		flex-direction: column;
-		gap: 40px;
-	}
-	.navMenu > ul > li.tamosactivo span {
-		width: 80%;
-	}
-	.menu > p.menudesplegado {
-		color: black;
-	} */
 	.header {
 		padding: 0;
 	}
 	.header[data-desplegado=si] {
-		/* background-color: red; */
 		position: absolute;
 	}
 	.navMenu > ul > li > a {

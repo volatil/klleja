@@ -1,0 +1,29 @@
+#buscador {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+}
+#buscador > input {
+	display: none;
+}
+#buscador > img {
+	margin-top: 8px;
+}
+#buscador[data-desplegado="si"] {
+	overflow: hidden;
+	border-radius: 20px;
+	border: 1px solid #ccc;
+}
+#buscador[data-desplegado="si"] > input {
+	display: block;
+	width: 100%;
+	outline: none;
+	border: none;
+	padding-left: 50px;
+	padding-right: 20px;
+}
+#buscador[data-desplegado="si"] > img {
+	position: absolute;
+	left: 10px;
+}
