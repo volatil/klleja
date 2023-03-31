@@ -27,7 +27,9 @@
 @media ( max-width: 850px ) {
 	.losmasvendidos {
 		display: flex;
-		flex-direction: column;
+		flex-direction: column-reverse;
+		border: 1px solid #ccc;
+		padding: 20px;
 	}
 	.losmasvendidos .mensaje {
 		width: 100%;
