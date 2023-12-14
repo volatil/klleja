@@ -68,6 +68,13 @@ const Producto = function (props) {
 						<p>El periodo de entrega para el producto personalizado es de 7 a 14 días.</p>
 						<p>Los plazos de devolución son de 30 días desde la confirmación de la entrega del producto.</p>
 					</Desplegable>
+					<Desplegable titulo="Cuidados">
+						<p>Lavar en agua fria.</p>
+						<p>A mano del lado del reves.</p>
+						<p>No usar lavandina.</p>
+						<p>No secar a maquina.</p>
+						<p>No planchar sobre estampa.</p>
+					</Desplegable>
 					<div className={detalle.categorias}>
 						<p>
 							<strong>Categorias:</strong> {" "}

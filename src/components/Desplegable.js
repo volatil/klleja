@@ -13,7 +13,7 @@ function Desplegable(props) {
 		<div className={desp.desplegable}>
 			<div className={desp.titulo} role="presentation" onClick={handleClick}>
 				<p>{titulo}</p>
-				<img src="/assets/svg/arrowdown.svg" width="15" height="9" alt="desplegar" />
+				<img src={`/assets/svg/${ desplegando ? "arrow-up-black" : "arrowdown" }.svg`} width="15" height="9" alt="desplegar" />
 			</div>
 			{ desplegando && (<div className={desp.contenido}>{children}</div>) }
 		</div>
