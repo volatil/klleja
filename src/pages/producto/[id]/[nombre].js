@@ -41,17 +41,7 @@ const Producto = function (props) {
 			<Breadcrumb nombreproducto={p.nombre} />
 			<div className={detalle.producto}>
 				<div className={detalle.imagen}>
-					<Image
-						src={`/assets/images/productos/${p.id}/${p.id}.webp`}
-						priority="high"
-						// width={600}
-						// height={827}
-						fill
-						sizes="(min-width: 768px) 100vw,
-							(min-width: 1200px) 50vw,
-							33vw"
-						alt={p.nombre}
-					/>
+					<img src={p.imagen} alt={p.nombre} />
 				</div>
 				<div className={detalle.informacion}>
 					<h5>{p.nombre}</h5>
