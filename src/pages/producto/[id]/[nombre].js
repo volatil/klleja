@@ -107,8 +107,8 @@ const Detalle = function ({ dataFetch }) {
 	return (
 		<>
 			<Head>
-				<title>{dataFetch[id][2]} || KLLEJA</title>
-				<meta name="description" content={HEAD.description} />
+				<title>{nombre} | KLLEJA</title>
+				<meta name="description" content="The beat of life" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 
