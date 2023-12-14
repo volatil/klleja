@@ -100,7 +100,6 @@ const Detalle = function ({ dataFetch }) {
 			const productoexacto = await data[id];
 			setladata( productoexacto );
 		}
-		console.debug( "test repeticion" );
 		trae();
 	}, [id]);
 
