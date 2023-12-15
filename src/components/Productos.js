@@ -4,10 +4,11 @@ import { precio } from "@/helpers/helpers";
 import cssprod from "@/styles/GrillaProductos.module.css";
 
 function Productos(props) {
-	const { info } = props;
+	const { cantidad, info } = props;
+	const cantProductos = cantidad || 4;
 	const todo = [];
-	// for ( let count = 1; count <= info.length - 1; count++ ) {
-	for ( let count = 1; count <= 4; count++ ) {
+
+	for ( let count = 1; count <= cantProductos; count++ ) {
 		const p = {
 			id: info[count][0],
 			nombre: info[count][2],
