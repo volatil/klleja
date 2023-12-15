@@ -34,7 +34,6 @@ const Producto = function (props) {
 		color: info[5],
 		imagen: info[6],
 		descripcion: info[7],
-		categorias: info[8].split(","),
 	};
 	return (
 		<>
@@ -75,18 +74,6 @@ const Producto = function (props) {
 						<p>No secar a maquina.</p>
 						<p>No planchar sobre estampa.</p>
 					</Desplegable>
-					<div className={detalle.categorias}>
-						<p>
-							<strong>Categorias:</strong> {" "}
-							{
-								p.categorias.map((categoria) => {
-									return (
-										<span key={categoria}>{categoria}</span>
-									);
-								})
-							}
-						</p>
-					</div>
 				</div>
 			</div>
 		</>

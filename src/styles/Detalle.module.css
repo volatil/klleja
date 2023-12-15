@@ -2,6 +2,7 @@
 	width: 90%;
 	margin: 0 auto;
 	display: flex;
+	gap: 20px;
 }
 .producto .imagen img {
 	position: relative !important;
@@ -39,18 +40,6 @@
 .producto .precio > p {
 	font-weight: 600;
 	font-size: 1.5em;
-}
-.producto .categorias {
-	margin-top: 30px;
-}
-.producto .categorias > p > strong {
-	font-weight: 600;
-}
-.producto .categorias > p > span::after {
-	content: ", ";
-}
-.producto .categorias > p > span:last-of-type::after {
-	content: "";
 }
 
 @media ( max-width: 850px ) {
