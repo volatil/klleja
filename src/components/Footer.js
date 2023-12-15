@@ -41,6 +41,11 @@ const Footer = function () {
 								<p>Configuración de cookies</p>
 							</Link>
 						</li>
+						<li>
+							<Link href="/ayuda">
+								<p>Ayuda</p>
+							</Link>
+						</li>
 					</ul>
 					<ul className={css.redes}>
 						<li>

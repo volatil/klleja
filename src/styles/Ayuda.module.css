@@ -1,0 +1,14 @@
+.contenedor {
+	width: 80%;
+	margin: 40px auto 0;
+}
+.contenedor > div {
+	margin-bottom: 40px;
+}
+.contenedor > div > h3 {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+.contenedor > div > p {
+	margin: 10px 0;
+}
