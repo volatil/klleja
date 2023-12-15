@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-// import trae from "@/services/api";
 import Boton from "./BotonRuta";
 import Productos from "./Productos";
 
@@ -12,12 +11,10 @@ const LosMasVendidos = function () {
 	const [ladata, setladata] = useState(null);
 
 	useEffect(() => {
-		async function trae() {
-			const traido = await fetch(API);
-			let data = await traido.json();
-			data = data.values;
-			setladata( data );
-		}
+		const trae = async function () {
+			const traido = await fetch(API).then((res) => res.json());
+			setladata( traido.values );
+		};
 		trae();
 	}, []);
 
